@@ -1,0 +1,88 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Ocultar el scroll horizontal */
+body, html {
+    overflow-x: hidden;
+}
+
+#welcomeMessage h1,
+#welcomeMessage p {
+    color: #262626; /* 'background-dark' */
+}
+
+#welcomeMessage {
+    background-color: #f8f8f8; /* Un color blanco/gris claro */
+}
+
+/* =============================================================== */
+/* === ESTILOS DE BOTONES UNIFICADOS (CORREGIDO) ================= */
+/* =============================================================== */
+
+/* --- Estado por Defecto --- */
+/* Aplica un filtro blanco a TODOS los íconos (SVG y Ion-icon) */
+#sidebar button img,
+#aiChatToggleBtn ion-icon,
+.control-btn img {
+    filter: invert(1);
+    transition: filter 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* --- Efecto Hover (al pasar el cursor) --- */
+/* Cambia el fondo a blanco y el ícono/texto a negro para TODOS los botones principales */
+#sidebar button:hover,
+#aiChatToggleBtn:hover,
+.control-btn:hover {
+    background-color: #f8f8f8 !important; /* Usamos un blanco/gris claro */
+}
+
+#sidebar button:hover img,
+#aiChatToggleBtn:hover ion-icon,
+.control-btn:hover img {
+    filter: invert(0);
+    color: #262626 !important; /* Color de texto oscuro */
+}
+
+
+/* --- Estilo Base para .control-btn --- */
+.control-btn {
+    width: 3rem;   /* 48px */
+    height: 3rem;  /* 48px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem; /* 12px */
+    background-color: #4a4a4a; /* 'button-dark' */
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* --- Estado Activo/Seleccionado --- */
+.active-btn {
+    background-color: #f8f8f8 !important;
+}
+
+.active-btn img, 
+.active-btn ion-icon {
+    filter: invert(0) !important;
+    color: #262626 !important;
+}
+
+/* --- Estilos para la barra lateral deslizable --- */
+
+/* Ocultar barra de desplazamiento para Chrome, Safari y Opera */
+.custom-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Ocultar barra de desplazamiento para IE, Edge y Firefox */
+.custom-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Asegura que el sidebar no pierda el color de fondo al scrollear */
+#sidebar {
+    background-color: #1e1e1e; /* sidebar-dark */
+}
